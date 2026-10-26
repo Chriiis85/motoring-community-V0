@@ -1,48 +1,48 @@
-# 🏎️ TFG DAW 2024 — Motoring Community (PHP & MySQL)
+# TFG DAW 2024 — Motoring Community (PHP & MySQL)
 
-[🇪🇸 Ver en Español](#-español) | [🇬🇧 View in English](#-english)
+[Ver en Español](#-español) | [View in English](#-english)
 
-> 🎓 **Trabajo de Fin de Grado** para la obtención del título de **Técnico Superior en Desarrollo de Aplicaciones Web (DAW)**  
+> 🎓 **Trabajo de Fin de Grado** · Técnico Superior en Desarrollo de Aplicaciones Web (DAW)  
 > 🏛️ **Centro:** I.E.S. Puig Adam (Getafe, Madrid) · **Año:** 2024  
-> 🚀 **Evolución moderna (Next.js 16 + React 19):** [Motoring Community](https://github.com/Chriiis85/motoring-community) · [Live Demo](https://motoring-community-v1.vercel.app)
+> 🚀 **Evolución moderna (Next.js 16 + React 19):** [Motoring Community](https://github.com/Chriiis85/motoring-community) · [Demo](https://motoring-community-v1.vercel.app)
 
 ---
 
 ## 🇪🇸 Español
 
-¡Hola! 👋 Soy **Christian**. Este repositorio contiene el código fuente completo de mi **Trabajo de Fin de Grado (TFG)** en **Desarrollo de Aplicaciones Web (DAW)**.
+¡Hola! 👋 Soy **Christian**. Este repositorio contiene el código de mi **Trabajo de Fin de Grado (TFG)** con el que completé el grado superior de **DAW**.
 
-Como apasionado del motor y de la Fórmula 1, quise enfocar mi proyecto final en la creación de una **plataforma comunitaria Full Stack completa** construida de forma artesanal con tecnologías web fundamentales: **PHP nativo**, **JavaScript modular**, **CSS3 puro** y **MySQL**.
+Como aficionado a la Fórmula 1, quise desarrollar una **plataforma web completa** trabajando directamente con las tecnologías fundamentales de la web: **PHP**, **JavaScript**, **CSS3** y **MySQL**, sin recurrir a frameworks pesados.
 
-Este proyecto representa la **primera versión y el origen arquitectónico** de lo que más tarde evolucioné hacia un ecosistema moderno con Next.js y React en [Motoring Community](https://github.com/Chriiis85/motoring-community). Aquí se validaron todos los modelos de datos, flujos de autenticación, integración de APIs de carreras y la experiencia comunitaria.
+Este proyecto fue el punto de partida y la base sobre la que más adelante construí [Motoring Community](https://github.com/Chriiis85/motoring-community) con Next.js y React. Toda la estructura de datos, las consultas a clasificaciones, los foros y la lógica de usuarios se idearon y probaron primero aquí.
 
-### 🚀 Funcionalidades Principales
+### Qué incluye la plataforma
 
-- 🏁 **Foro Comunitario y Sistema de Usuarios:** Registro e inicio de sesión seguro, gestión de perfiles, publicación de hilos temáticos y respuestas dinámicas entre aficionados (`forum.php`, `users.php`).
-- 📅 **Calendario Oficial y Cuenta Atrás:** Horarios adaptados de cada Gran Premio, trazados de circuitos y cuenta regresiva hacia el fin de semana de carrera.
-- 🏆 **Clasificación del Mundial en Vivo:** Tablas actualizadas de pilotos y constructores con puntuaciones, banderas de países y escuderías.
-- 🏎️ **Fichas Técnicas de Pilotos y Escuderías:** Catálogo con perfiles biográficos, dorsales, monoplazas y estadísticas históricas.
-- ♿ **Accesibilidad Universal (WCAG & WAI-ARIA):** Navegación completa por teclado (`tabindex`), etiquetas semánticas y contrastes verificados para compatibilidad con lectores de pantalla.
-- 🐳 **Entorno Contenerizado con Docker:** Configuración lista para desplegar en local con Apache, PHP y base de datos MySQL.
+- **Foro y usuarios:** Sistema de registro e inicio de sesión, perfiles de usuario y publicación de hilos de debate para comentar los fines de semana de carreras (`forum.php`, `users.php`).
+- **Calendario con cuenta atrás:** Fechas y horarios de cada Gran Premio de la temporada junto con los planos de los circuitos.
+- **Clasificaciones en directo:** Tablas actualizadas del Mundial de Pilotos y Constructores con puntos y banderas.
+- **Fichas de pilotos y escuderías:** Información técnica de los monoplazas, dorsales y biografías de los pilotos.
+- **Accesibilidad web:** Navegación pensada para teclado (`tabindex`), estructura semántica limpia y contrastes cuidados para lectores de pantalla (WCAG 2.1).
+- **Docker:** Configuración básica con Dockerfile y Docker Compose para levantar el entorno con Apache, PHP y MySQL en local en un par de minutos.
 
-### 💡 Retos Técnicos Resueltos
+### Retos técnicos resueltos
 
-1. **Arquitectura MVC Limpia en PHP Nativo:**  
-   Diseño estructurado separando controladores, vistas modulares (`header.php`, `footer.php`, `calendar.php`) y servicios de datos sin depender de frameworks comerciales, dominando los fundamentos del ciclo de petición HTTP y sesiones de servidor.
-2. **Modelado Relacional e Integridad en MySQL:**  
-   Esquema de base de datos relacional (`BD_Motoring_Community.sql`) con claves foráneas, índices optimizados y restricciones de integridad para soportar usuarios, hilos de debate, comentarios y resultados deportivos.
-3. **Peticiones Asíncronas y Consumo de APIs:**  
-   Lógica en JavaScript (`JS/script.js`, `JS/news.js`) para consumir datos en tiempo real de APIs de competición y refrescar componentes sin recargar la página.
+1. **Estructura MVC en PHP nativo:**  
+   Separé controladores, vistas modulares (`header.php`, `footer.php`, `calendar.php`) y consultas a base de datos de forma limpia para entender en profundidad el ciclo de vida de las peticiones HTTP y la gestión de sesiones.
+2. **Modelado de base de datos en MySQL:**  
+   Diseñé el esquema relacional (`BD_Motoring_Community.sql`) con claves foráneas e índices para relacionar usuarios, publicaciones del foro, comentarios y resultados deportivos de forma eficiente.
+3. **Peticiones dinámicas con JavaScript:**  
+   Implementé llamadas asíncronas para actualizar datos y resultados de competición sin necesidad de recargar la página completa.
 
-### 🛠️ Stack Tecnológico
+### Tecnologías utilizadas
 
-- **Backend:** PHP nativo (Arquitectura MVC, manejo de sesiones, PDO/MySQLi)
-- **Base de Datos:** MySQL (Modelado relacional, consultas preparadas)
-- **Frontend:** HTML5 semántico, CSS3 responsive (Flexbox, CSS Grid), JavaScript (ES6+)
-- **DevOps:** Dockerfile & Docker Compose, Apache Web Server, `.htaccess`
-- **Accesibilidad:** Estándares WCAG 2.1 / WAI-ARIA (a11y)
+- **Backend:** PHP nativo (MVC, sesiones, PDO)
+- **Base de Datos:** MySQL
+- **Frontend:** HTML5 semántico, CSS3 (Flexbox y Grid), JavaScript (ES6+)
+- **Entorno:** Docker, Apache, `.htaccess`
+- **Accesibilidad:** Criterios WCAG 2.1 / WAI-ARIA
 
-### 💻 Cómo probarlo en local
+### Cómo probarlo en local
 
 #### Opción A: Con Docker (Recomendado)
 ```bash
@@ -50,92 +50,76 @@ Este proyecto representa la **primera versión y el origen arquitectónico** de 
 git clone https://github.com/Chriiis85/TFG-DAW-2024.git
 cd TFG-DAW-2024
 
-# 2. Levantar los contenedores de Docker
+# 2. Levantar los contenedores
 docker compose up -d
 
-# 3. Abrir en el navegador
-# http://localhost:8080
+# 3. Abrir en el navegador: http://localhost:8080
 ```
 
-#### Opción B: Con XAMPP / WAMP / LAMP
+#### Opción B: Con XAMPP o WAMP
 ```bash
-# 1. Clonar en tu directorio htdocs
+# 1. Clonar en la carpeta htdocs
 git clone https://github.com/Chriiis85/TFG-DAW-2024.git
 
 # 2. Importar la base de datos
-# Abre phpMyAdmin y crea la base de datos importando el archivo:
-# BD_Motoring_Community.sql
+# Abre phpMyAdmin e importa el archivo: BD_Motoring_Community.sql
 
-# 3. Acceder en el navegador
-# http://localhost/TFG-DAW-2024/index.php
+# 3. Abrir en el navegador: http://localhost/TFG-DAW-2024/index.php
 ```
 
 ---
 
 ## 🇬🇧 English
 
-Hello! 👋 I'm **Christian**. This repository hosts the complete source code for my **Final Degree Project (TFG)** for the **Higher Technical Degree in Web Application Development (DAW)** at **I.E.S. Puig Adam** (Madrid, Spain).
+Hello! 👋 I'm **Christian**. This repository contains the source code for my **Final Degree Project (TFG)** for the Higher Technical Degree in **Web Application Development (DAW)** at **I.E.S. Puig Adam** (Madrid, Spain).
 
-As a motorsport and Formula 1 enthusiast, I focused my capstone project on building a **full-stack community platform from the ground up** using foundational web technologies: **native PHP**, **vanilla JavaScript**, **custom CSS3**, and **MySQL**.
+As a Formula 1 enthusiast, I built this full-stack web application directly with core web technologies: **native PHP**, **vanilla JavaScript**, **CSS3**, and **MySQL**.
 
-This project represents the **initial blueprint and architecture** that I later evolved into the modern Next.js 16 and React 19 application: [Motoring Community](https://github.com/Chriiis85/motoring-community). The data models, authentication flows, race API consumption, and social dynamics were first designed and battle-tested here.
+This project served as the initial prototype and architectural foundation for what later became [Motoring Community](https://github.com/Chriiis85/motoring-community) (my modern rewrite with Next.js and React). The forum logic, database schemas, and race results integration were all initially developed here.
 
-### 🚀 Key Features
+### Features
 
-- 🏁 **Community Forum & User Management:** User registration and secure authentication, profile management, and interactive discussion threads for Grand Prix weekends (`forum.php`, `users.php`).
-- 📅 **Grand Prix Calendar & Countdown:** Race schedule with local session times, circuit track maps, and live race weekend countdowns.
-- 🏆 **World Championship Standings:** Real-time driver and constructor championship tables with points, wins, and country flags.
-- 🏎️ **Driver & Team Spec Sheets:** Comprehensive catalog with driver biographies, racing numbers, car specs, and career stats.
-- ♿ **Universal Accessibility (WCAG & WAI-ARIA):** Full keyboard navigation (`tabindex`), accessible semantic markup, and verified contrast ratios for screen-reader support.
-- 🐳 **Dockerized Environment:** Pre-configured Docker setup running Apache, PHP, and MySQL for instant local reproducibility.
+- **Forum & User Accounts:** Secure login and registration, user profiles, and discussion threads for race weekends (`forum.php`, `users.php`).
+- **Calendar & Countdown:** Race schedule with local session times and track circuit maps.
+- **Live Standings:** Driver and Constructor championship tables with points and team standings.
+- **Driver & Team Profiles:** Car specs, driver numbers, and biographies.
+- **Web Accessibility:** Accessible semantic layout with keyboard navigation support (WCAG 2.1).
+- **Docker Setup:** Pre-configured Docker environment running Apache, PHP, and MySQL for simple local setup.
 
-### 💡 Technical Highlights
+### Technical Highlights
 
-1. **Clean MVC Architecture in Native PHP:**  
-   Modular separation between controllers, views (`header.php`, `footer.php`, `calendar.php`), and data services without heavy frameworks, solidifying deep understanding of HTTP request lifecycles and server-side session management.
-2. **Relational Database Modeling with MySQL:**  
-   Engineered a structured relational schema (`BD_Motoring_Community.sql`) with foreign keys, indexes, and integrity constraints for users, posts, comments, and telemetry/standings data.
-3. **Asynchronous API Consumption:**  
-   JavaScript (`JS/script.js`, `JS/news.js`) handling async requests to competition data feeds, updating page widgets without full browser reloads.
+1. **Native PHP MVC Architecture:**  
+   Clean separation between controllers, views, and data queries without frameworks, reinforcing core concepts of server-side sessions and HTTP lifecycles.
+2. **Relational MySQL Database:**  
+   Relational database schema (`BD_Motoring_Community.sql`) with foreign keys and indexes linking users, forum posts, and race data.
+3. **Async JavaScript:**  
+   Asynchronous fetch requests updating race telemetry and forum interactions without full-page reloads.
 
-### 🛠️ Tech Stack
+### Tech Stack
 
-- **Backend:** Native PHP (MVC architecture, session handling, PDO)
-- **Database:** MySQL (Relational schema, prepared statements)
-- **Frontend:** Semantic HTML5, pure CSS3 (Flexbox, CSS Grid), JavaScript (ES6+)
-- **DevOps:** Dockerfile & Docker Compose, Apache Web Server, `.htaccess`
-- **Accessibility:** WCAG 2.1 / WAI-ARIA standards (a11y)
+- **Backend:** Native PHP (MVC, PDO)
+- **Database:** MySQL
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **Environment:** Docker, Apache, `.htaccess`
 
-### 💻 Local Setup Guide
+### Local Setup
 
-#### Option A: Using Docker (Recommended)
+#### Option A: Docker
 ```bash
-# 1. Clone repository
 git clone https://github.com/Chriiis85/TFG-DAW-2024.git
 cd TFG-DAW-2024
-
-# 2. Start containers
 docker compose up -d
-
-# 3. Access in browser
-# http://localhost:8080
+# Navigate to: http://localhost:8080
 ```
 
-#### Option B: Using XAMPP / WAMP
+#### Option B: XAMPP / WAMP
 ```bash
-# 1. Clone inside your htdocs directory
-git clone https://github.com/Chriiis85/TFG-DAW-2024.git
-
-# 2. Import database
-# Open phpMyAdmin, create a database and import:
-# BD_Motoring_Community.sql
-
-# 3. Navigate to:
-# http://localhost/TFG-DAW-2024/index.php
+# Clone into htdocs and import BD_Motoring_Community.sql in phpMyAdmin
+# Navigate to: http://localhost/TFG-DAW-2024/index.php
 ```
 
 ---
 
 <div align="center">
-  <sub>Desarrollado con dedicación por Christian Moreno Díaz · © TFG DAW 2024</sub>
+  <sub>Christian Moreno Díaz · TFG DAW 2024</sub>
 </div>
